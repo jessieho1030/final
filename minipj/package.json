@@ -1,0 +1,17 @@
+{
+    "name": "s381fminipj",
+    "description": "NodeJS Session",
+    "author": "Jessie Ho <hoyinyu1030@gmail.com>",
+    "version": "0.0.1",
+    "dependencies": {
+        "express": "*",
+        "ejs": "*",
+        "body-parser": "*",
+        "cookie-session": "*",
+        "mongodb": "*"
+    },
+    "engine": "node >= 0.10.0",
+    "scripts": {
+        "start": "node server"
+    }
+}

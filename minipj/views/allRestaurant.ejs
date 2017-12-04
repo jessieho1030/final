@@ -1,0 +1,67 @@
+
+<!DOCTYPE HTML>
+<!--
+	Typify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+--><!--
+<html>
+	<head>
+		<title>381</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style type="text/css">
+		.addresshead {
+	text-align: left;
+}
+        </style>
+	</head>
+	<body>
+
+			<section id="banner">
+				<h2><strong>Restaurant Website</strong></h2>
+				<p>s381f mini project </p>			
+			</section>
+			<section id="two" class="wrapper style2 special">
+				<div class="inner narrow">
+					<header>
+						<h2>SHOW ALL RESTAURANT</h2><br>                      
+					</header>
+   <body>  	 
+
+		<%if(i) {%>
+			<li><a href=/display?_id= <%= id%> > <%= name%></a></li>
+		<%}%>
+	</div>
+	</section>
+
+
+			<footer id="footer">
+				<div class="copyright">
+					&copy; Untitled. Design: <a href="http://templated.co/">TEMPLATED</a>.
+                    <p>Modified by Tai Tsz Kin for the s381F project.</p>
+				</div>
+			</footer>
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>-->
+
+
+<html><head><link rel="stylesheet" href="assets/css/main.css" /></head></head>
+<body> <section id="banner">
+<header><H2>Restaurants List</H2></header>
+</section>
+	<section id="two" class="wrapper style2 special"><div class="inner narrow"><ol>
+	<% for (var i in restaurants) {%>
+		<li><a href='/restaurant?_id=<%=restaurants[i]._id%>'> <%=restaurants[i].name%></a></li>
+	<%}%>
+	</ol></div>
+	</section>
+</body>
+</html>

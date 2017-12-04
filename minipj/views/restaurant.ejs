@@ -1,0 +1,103 @@
+<!--<html>
+<body>
+  <H1>Restaurant Info</H1>
+  <form action='/logout'  method="GET">
+    <input type="submit" name="logout" value="logout">
+  </form>  
+  
+  
+</body>
+</html>-->
+
+<!DOCTYPE HTML>
+<!--
+	Typify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>381</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style type="text/css">
+		.addresshead {
+	text-align: left;
+}
+        </style>
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Banner -->
+			<section id="banner">
+				<h2><strong>Restaurant Website</strong></h2>
+				<p>s381f mini project </p>
+				
+			</section>
+
+		<!-- One -->
+		
+		<!-- Two -->
+			<section id="two" class="wrapper style2 special">
+				<div class="inner narrow">
+					<header>
+            <h2>Restaurant Information<h2>
+					</header>
+				
+
+   <body>
+		 <form action='' method="get"> 
+			<p>Name: <%=r.name%><br>
+			Borough:<%=r.borough%><br>
+      Cuisine: <%=r.cuisine%><br>
+      <span class="addresshead">Address:</span><br>
+      Building: <%=r.address.building%><br>
+      Street: <%=r.address.street%><br>
+			Coordinate: <%=r.address.lat%>, <%=r.address.long%>
+			<a href='/map?lat=<%=r.address.lat%>&lon=<%=r.address.long%>'>Google Map</a></p>
+			Grade: 
+			<% for(var i in r.grade){%>
+				<li>User: <%=r.grade[i].username%>, Score: <%=r.grade[i].score%></li>
+			<%}%>
+</form>
+			<form action='' method="POST"> 
+				grade:&nbsp<input type="number" name="score" min="1" max="10" required><br>
+			 <input type="submit" name="rate" class="button special" value="rate">
+			</form>
+    
+     <p><br>
+     </p> 
+ 	
+
+
+	<form action='/updateRestaurant' method="GET">
+		<input type=submit name="update" class="button special" value="update"><br>
+	</form>
+		<form action='/delete' method="GET">
+		<input type=submit name="delete" class="button special" value="delete"><br>
+	</form>
+	<form action='/main' method="GET">
+		<input type=submit name="main" class="button special" value="main"><br>
+	</form>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					&copy; Untitled. Design: <a href="http://templated.co/">TEMPLATED</a>.
+                    <p>Modified by Tai Tsz Kin for the s381F project.</p>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
